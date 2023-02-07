@@ -1,0 +1,18 @@
+## Database Settings
+#spring:
+#  h2:
+#    hikari:
+#      jdbc-rul: jdbc:h2:mem:testdb;MODE=mysql;
+#  datasource:
+#    url: jdbc:h2:mem:testdb;MODE=mysql;
+#    username: sa
+#    password:
+#    driverClassName: org.h2.Driver
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gc-coffee
+    username: root
+    password: sw1234!

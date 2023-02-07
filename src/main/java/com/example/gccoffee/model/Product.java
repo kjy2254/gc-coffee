@@ -3,8 +3,6 @@ package com.example.gccoffee.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -19,6 +17,15 @@ public class Product {
     private String description;
     private final LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+    public Product(UUID productId, String productName, Category category, long price) {
+        this.productId = productId;
+        this.productName = productName;
+        this.category = category;
+        this.price = price;
+        this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
+    }
 
     public Product(UUID productId, String productName, Category category, long price, String description) {
         this.productId = productId;
