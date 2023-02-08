@@ -10,6 +10,7 @@ import com.example.gccoffee.service.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,7 @@ public class OrderRestController {
     @Autowired
     private final OrderService orderService;
 
-    @GetMapping("/api/v1/orders")
+    @PostMapping("/api/v1/orders")
     public Order createOrder(@RequestBody CreateOrderRequest orderRequest) {
         return orderService.createOrder(
                 new Email(orderRequest.email()),

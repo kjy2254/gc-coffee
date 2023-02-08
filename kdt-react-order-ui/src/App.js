@@ -15,6 +15,7 @@ function App() {
             items.map(v => (v.id === id) ? {...v, count: v.count + 1} : v)
             : [...items, {...product, count: 1}];
         setItems(updatedItems);
+        console.log(items);
     }
 
     useEffect(() => {
